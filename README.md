@@ -4,7 +4,7 @@ Restore Loaded Tabs remembers which Firefox tabs are loaded and which are unload
 
 The extension runs locally, does not read page contents, and does not collect or transmit data.
 
-- [Website](https://d3sox.github.io/restore-loaded-tabs/)
+- [Website](https://d3sox.me/restore-loaded-tabs/)
 - [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/restore-loaded-tabs/)
 
 ## Requirements
