@@ -1,4 +1,4 @@
-# Restore Loaded Tabs
+<h1><img src="icons/icon.svg" alt="" width="40" height="40" align="left">Restore Loaded Tabs</h1>
 
 Restore Loaded Tabs remembers which Firefox tabs are loaded and which are unloaded. After Firefox restarts, it reloads only the tabs that were loaded before shutdown and leaves the others unloaded.
 
@@ -29,15 +29,6 @@ It waits briefly for Firefox to finish creating restored windows and tabs before
 
 The extension requests only the `sessions` permission. It has no host permissions and cannot access page contents.
 
-## Test locally
-
-1. Open `about:debugging` in Firefox.
-2. Select **This Firefox**.
-3. Select **Load Temporary Add-on**.
-4. Choose `manifest.json` from this directory.
-
-Temporary add-ons are removed when Firefox exits. To test behavior across a full restart, upload the extension to AMO as an unlisted version, install the signed XPI, and restart Firefox.
-
 ## Package for AMO
 
 Run this command from the project directory:
@@ -50,10 +41,6 @@ Upload the resulting ZIP in the [AMO Developer Hub](https://addons.mozilla.org/d
 
 No separate source archive or build instructions are needed because the submitted files are the original, readable source files and there is no build step.
 
-Suggested reviewer notes:
-
-> The extension stores each tab's loaded or discarded state with `browser.sessions.setTabValue`. On browser startup, it compares that saved state with the restored tabs. It reloads tabs previously marked as loaded and discards non-active tabs previously marked as unloaded. No page contents are accessed, and no data leaves Firefox.
-
 ## Release checklist
 
 1. Update `version` in `manifest.json`.
@@ -61,3 +48,7 @@ Suggested reviewer notes:
 3. Run `web-ext lint`.
 4. Create the ZIP with the command above.
 5. Upload it to AMO.
+
+## Acknowledgment
+
+This extension was written with GPT-5.6 Sol in Codex.
